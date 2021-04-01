@@ -4,21 +4,44 @@
     <div class="main__container">
       <div class="main__box">
         <div class="main__box__image1">
-          <img
-            src="../assets/mobile/image-phone-and-keyboard.jpg"
-            alt="keyboard image 1"
-          />
+          <div class="main__box__overlay"></div>
+          <picture>
+            <source
+              srcset="
+                ../assets/mobile/image-phone-and-keyboard.jpg   950w,
+                ../assets/tablet/image-phone-and-keyboard.jpg  1297w,
+                ../assets/desktop/image-phone-and-keyboard.jpg 1640w
+              "
+            />
+            <img
+              src="../assets/mobile/image-phone-and-keyboard.jpg"
+              alt="keyboard image 1"
+            />
+          </picture>
         </div>
         <div class="main__box__image2">
-          <img
-            src="../assets/mobile/image-glass-and-keyboard.jpg"
-            alt="keyboard image 2"
-          />
+          <picture>
+            <source
+              srcset="
+                ../assets/mobile/image-glass-and-keyboard.jpg   950w,
+                ../assets/tablet/image-glass-and-keyboard.jpg  1297w,
+                ../assets/desktop/image-glass-and-keyboard.jpg 1640w
+              "
+            />
+            <img
+              src="../assets/mobile/image-phone-and-keyboard.jpg"
+              alt="keyboard image 1"
+            />
+          </picture>
         </div>
       </div>
       <div class="main__info">
-        <div class="main__info__title"></div>
-        <div class="main__info__body"></div>
+        <h2 class="main__info__title">mechanical wireless Keyboard</h2>
+        <p class="main__info__body">
+          The Typemaster keyboard boasts top-notch build and practical design.
+          It offers a wide variety of switches and keycaps, along with reliable
+          wireless connectivity.
+        </p>
       </div>
     </div>
   </main>
@@ -29,4 +52,61 @@ export default {
   name: "main-section",
 };
 </script>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.main {
+  &__container {
+  }
+  &__box {
+    display: flex;
+    margin-bottom: 6rem;
+    position: relative;
+    &__overlay {
+      width: 12.9rem;
+      height: 19.3rem;
+      background-color: #f12c18;
+      position: absolute;
+      opacity: 0.5;
+      margin-left: -2rem;
+      border-radius: 2rem;
+    }
+    &__image1 {
+      & picture {
+        & img {
+          margin-left: -2rem;
+          width: 12.9rem;
+          height: 19.3rem;
+          border-radius: 2rem;
+        }
+      }
+    }
+    &__image2 {
+      & picture {
+        & img {
+          margin-left: 3rem;
+          width: 22rem;
+          height: 19.3rem;
+          border-radius: 2rem;
+        }
+      }
+    }
+  }
+  &__info {
+    width: 32.7rem;
+    margin: 0 auto;
+    &__title {
+      font-size: 3.9rem;
+      text-transform: uppercase;
+      font-weight: 500;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    &__body {
+      text-align: center;
+      font-size: 1.65rem;
+      color: var(--body-color);
+      line-height: 1.5;
+      margin-bottom: 2rem;
+    }
+  }
+}
+</style>

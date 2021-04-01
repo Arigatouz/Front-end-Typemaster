@@ -1,12 +1,12 @@
 <template>
   <div class="navigation">
     <ul class="navigation__list">
-      <l1 class="navigation__item">
+      <li class="navigation__item">
         <img class="navigation__logo" src="../assets/shared/logo.svg" alt="" />
-      </l1>
-      <l1 class="navigation__item">
+      </li>
+      <li class="navigation__item">
         <button class="navigation__btn">Pre-order now</button>
-      </l1>
+      </li>
     </ul>
   </div>
 </template>
@@ -24,7 +24,7 @@ export default {
   &__list {
     width: 100%;
     display: flex;
-
+    list-style-type: none;
     justify-content: space-around;
     align-items: center;
   }
