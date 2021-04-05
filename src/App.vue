@@ -2,6 +2,8 @@
   <Navigation />
   <header-component></header-component>
   <main-section></main-section>
+  <features-section></features-section>
+  <footer-section></footer-section>
 </template>
 
 <script>
@@ -9,12 +11,16 @@
 import Navigation from "./components/Navigation";
 import HeaderComponent from "./components/HeaderComponent.vue";
 import MainSection from "./components/MainSection";
+import FeaturesSection from "./components/FeaturesSection";
+import FooterSection from "./components/FooterSection.vue";
 export default {
   name: "App",
   components: {
     Navigation,
     HeaderComponent,
     MainSection,
+    FeaturesSection,
+    FooterSection,
   },
 };
 </script>
