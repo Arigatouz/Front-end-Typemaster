@@ -1,0 +1,18 @@
+/* //break Points */
+@mixin respond($breakpoint) {
+  @if ($breakpoint == smallTab) {
+    @media screen and (min-width: 600px) {
+      @content;
+    }
+  }
+  @if ($breakpoint == tab) {
+    @media screen and (min-width: 768px) {
+      @content;
+    }
+  }
+  @if ($breakpoint == deskTop) {
+    @media screen and (min-width: 1440px) {
+      @content;
+    }
+  }
+}

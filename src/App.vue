@@ -28,25 +28,6 @@ export default {
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,400;0,900;1,100&display=swap");
 
-/* //break Points */
-@mixin respond($breakpoint) {
-  @if ($breakpoint == smallTab) {
-    @media screen and (min-width: 700px) {
-      @content;
-    }
-  }
-  @if ($breakpoint == tab) {
-    @media screen and (min-width: 900px) {
-      @content;
-    }
-  }
-  @if ($breakpoint == deskTop) {
-    @media screen and (min-width: 1440px) {
-      @content;
-    }
-  }
-}
-
 /* // general reset */
 *,
 *::before,
@@ -73,6 +54,7 @@ html {
   --font-Barlow: "Barlow", sans-serif;
 }
 #app {
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin-top: 3rem;

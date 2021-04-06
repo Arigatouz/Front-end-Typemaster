@@ -18,6 +18,7 @@ export default {
 };
 </script>
 <style scoped lang="scss">
+@import "../assets/scss/style.scss";
 .navigation {
   width: 90%;
   margin: 0 auto;
@@ -27,9 +28,19 @@ export default {
     list-style-type: none;
     justify-content: space-around;
     align-items: center;
+    @include respond(smallTab){
+      justify-content: space-between;
+    }
   }
   &__item {
     width: 50%;
+
+    @include respond(smallTab){
+      width: 32%;
+    }
+    @include respond(tab){
+      width: 25%;
+    }
   }
   &__logo {
     width: 4rem;

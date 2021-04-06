@@ -53,21 +53,29 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+@import "../assets/scss/style.scss";
 .main {
   &__container {
   }
   &__box {
     display: flex;
     margin-bottom: 6rem;
-    position: relative;
+    @include respond(tab) {
+      justify-content: center;
+    }
     &__overlay {
       width: 12.9rem;
       height: 19.3rem;
-      background-color: #f12c18;
+      background-color: #f84108;
       position: absolute;
       opacity: 0.5;
       margin-left: -2rem;
       border-radius: 2rem;
+      @include respond(tab) {
+        width: 21.4rem;
+        height: 32rem;
+        margin-left: 0;
+      }
     }
     &__image1 {
       & picture {
@@ -76,6 +84,11 @@ export default {
           width: 12.9rem;
           height: 19.3rem;
           border-radius: 2rem;
+          @include respond(tab) {
+            width: 21.4rem;
+            height: 32rem;
+            margin-left: 0;
+          }
         }
       }
     }
@@ -86,6 +99,10 @@ export default {
           width: 22rem;
           height: 19.3rem;
           border-radius: 2rem;
+          @include respond(tab) {
+            width: 44.5rem;
+            height: 32rem;
+          }
         }
       }
     }

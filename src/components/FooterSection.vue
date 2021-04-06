@@ -7,7 +7,7 @@
 <script>
 /*eslint-disable*/
 export default {
-  name: "footer",
+  name: "footer-section",
 };
 </script>
 

@@ -41,14 +41,26 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+@import "../assets/scss/style.scss";
 .header {
   margin-top: 6rem;
+  @include respond(tab){
+    margin-bottom: 5rem;
+  }
   &__container {
     margin-bottom: 3rem;
+    @include respond(tab) {
+      display: flex;
+      margin-left: 5rem;
+    }
   }
   &__info {
     width: 32.4rem;
     margin: 0 auto;
+    @include respond(tab) {
+      width: 50.9rem;
+      margin-top: 5rem;
+    }
     &__title {
       margin: 0 0 2rem -1rem;
       font-size: 2.5rem;
@@ -56,12 +68,18 @@ export default {
       text-transform: uppercase;
       line-height: 1.1;
       color: var(--Header-color);
+      @include respond(tab) {
+        font-size: 2.8rem;
+      }
     }
     &__body {
       font-size: 1.65rem;
       color: var(--body-color);
       line-height: 1.5;
       margin-bottom: 2rem;
+      @include respond(tab) {
+        margin-bottom: 4rem;
+      }
     }
     &__action {
       display: flex;
@@ -87,6 +105,10 @@ export default {
           var(--main-color-hover) 50%
         );
         background-size: 240%;
+        @include respond(tab) {
+          padding: 1.9rem 3.3rem;
+          font-size: 1.8rem;
+        }
         &:hover,
         &:focus {
           background-position: 100%;
@@ -101,6 +123,9 @@ export default {
           transition: all 0.3s ease;
           transform: scale(1);
           position: relative;
+          @include respond(tab){
+            font-size: 1.6rem;
+          }
           &::after {
             content: "";
             position: absolute;
@@ -110,6 +135,9 @@ export default {
             height: 3px;
             background-color: var(--main-color-hover);
             display: none;
+            @include respond(tab){
+              width: 12rem;
+            }
           }
           &:hover {
             color: var(--main-color-hover);
@@ -130,6 +158,11 @@ export default {
       border-radius: 2rem;
       width: 37.2rem;
       height: 33.1rem;
+      @include respond(tab) {
+        // margin-left: 5rem;
+        width: 47.8rem;
+        height: 42.5rem;
+      }
     }
   }
 }
