@@ -41,10 +41,16 @@ export default {
     @include respond(tab){
       width: 25%;
     }
+    @include respond(deskTop){
+      width: 20%;
+    }
   }
   &__logo {
     width: 4rem;
     height: 4rem;
+    @include respond(deskTop){
+      margin-left: 8rem;
+    }
   }
   &__btn {
     cursor: pointer;
@@ -71,6 +77,7 @@ export default {
       background-position: 100%;
       color: var(--white);
     }
+
   }
 }
 </style>

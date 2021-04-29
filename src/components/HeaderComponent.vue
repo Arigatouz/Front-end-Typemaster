@@ -44,7 +44,8 @@ export default {
 @import "../assets/scss/style.scss";
 .header {
   margin-top: 6rem;
-  @include respond(tab){
+  width: 100%;
+  @include respond(tab) {
     margin-bottom: 5rem;
   }
   &__container {
@@ -53,6 +54,9 @@ export default {
       display: flex;
       margin-left: 5rem;
     }
+    @include respond(deskTop){
+      justify-content: center;
+    }
   }
   &__info {
     width: 32.4rem;
@@ -60,6 +64,9 @@ export default {
     @include respond(tab) {
       width: 50.9rem;
       margin-top: 5rem;
+    }
+    @include respond(deskTop){
+      width: 40%;
     }
     &__title {
       margin: 0 0 2rem -1rem;
@@ -123,7 +130,7 @@ export default {
           transition: all 0.3s ease;
           transform: scale(1);
           position: relative;
-          @include respond(tab){
+          @include respond(tab) {
             font-size: 1.6rem;
           }
           &::after {
@@ -135,7 +142,7 @@ export default {
             height: 3px;
             background-color: var(--main-color-hover);
             display: none;
-            @include respond(tab){
+            @include respond(tab) {
               width: 12rem;
             }
           }
@@ -154,15 +161,26 @@ export default {
   &__imageBox {
     overflow: hidden;
     margin-left: 3rem;
+    @include respond(deskTop){
+      width: 52%;
+    }
     &__image {
       border-radius: 2rem;
       width: 37.2rem;
       height: 33.1rem;
       @include respond(tab) {
-        // margin-left: 5rem;
+        margin-left: 5rem;
         width: 47.8rem;
         height: 42.5rem;
       }
+      @include respond(deskTop) {
+        width: 54rem;
+        height: 48rem;
+     
+      }
+    }
+    @include respond(deskTop){
+         margin-left: 0;
     }
   }
 }

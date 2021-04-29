@@ -26,6 +26,7 @@ export default {
 </script>
 
 <style lang="scss">
+@import "./assets/scss/style.scss";
 @import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,400;0,900;1,100&display=swap");
 
 /* // general reset */
@@ -54,7 +55,7 @@ html {
   --font-Barlow: "Barlow", sans-serif;
 }
 #app {
-
+  max-width: 1440px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin-top: 3rem;
