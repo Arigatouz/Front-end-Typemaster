@@ -75,7 +75,7 @@ export default {
         width: 21.4rem;
         height: 32rem;
         margin-left: 0;
-      }
+      } 
     }
     &__image1 {
       & picture {
@@ -110,12 +110,22 @@ export default {
   &__info {
     width: 32.7rem;
     margin: 0 auto;
+    @include respond(tab){
+      width: 90%;
+      display: flex;
+      justify-content: space-around;
+    }
     &__title {
       font-size: 3.9rem;
       text-transform: uppercase;
       font-weight: 500;
       text-align: center;
       margin-bottom: 2rem;
+      @include respond(tab){
+        font-size: 3.2rem;
+        text-align: left;
+        margin-right: 8rem;
+      }
     }
     &__body {
       text-align: center;
@@ -123,6 +133,12 @@ export default {
       color: var(--body-color);
       line-height: 1.5;
       margin-bottom: 2rem;
+      @include respond(tab){
+        font-size: 1.7rem;
+        line-height: 1.8;
+        align-self: center;
+        text-align: left;
+      }
     }
   }
 }

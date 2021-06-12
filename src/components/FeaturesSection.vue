@@ -85,11 +85,23 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../assets/scss/style.scss";
 .features {
   margin-top: 11.6rem;
   &__container {
     width: 32.7rem;
     margin: 0 auto;
+    @include respond(tab) {
+      width: 90%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 0px 0px;
+      grid-auto-flow: row;
+      grid-template-areas:
+        ". ."
+        ". .";
+    }
   }
   &__compatible,
   &__wireless,
@@ -97,6 +109,9 @@ export default {
   &__RGB {
     text-align: center;
     margin-bottom: 7rem;
+    @include respond(tab){
+      text-align: left;
+    }
   }
   &__imageContainer {
     width: 6.5rem;
@@ -106,10 +121,15 @@ export default {
     border-radius: 1rem;
     display: flex;
     justify-content: center;
+     @include respond(tab){
+    margin-left: 0;
+      
+    }
   }
   &__icon {
     align-self: center;
     justify-self: center;
+   
   }
   &__title {
     font-size: 2.4rem;

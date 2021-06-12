@@ -62,8 +62,8 @@ export default {
     width: 32.4rem;
     margin: 0 auto;
     @include respond(tab) {
-      width: 50.9rem;
-      margin-top: 5rem;
+      width: 43.9rem;
+      margin-top: 5rem; 
     }
     @include respond(deskTop){
       width: 40%;
@@ -113,8 +113,14 @@ export default {
         );
         background-size: 240%;
         @include respond(tab) {
-          padding: 1.9rem 3.3rem;
-          font-size: 1.8rem;
+          padding: 1.9rem 2.8rem;
+          font-size: 1.6rem;
+            background-image: linear-gradient(
+          130deg,
+          transparent 0%,
+          transparent 50%,
+          var(--main-color-hover) 50%
+        );
         }
         &:hover,
         &:focus {
@@ -124,14 +130,14 @@ export default {
       &__date {
         margin-left: 3rem;
         & p {
-          font-size: 1.3rem;
+          font-size: 1.6rem;
           color: var(--body-color);
           cursor: context-menu;
           transition: all 0.3s ease;
           transform: scale(1);
           position: relative;
           @include respond(tab) {
-            font-size: 1.6rem;
+          
           }
           &::after {
             content: "";
@@ -169,9 +175,11 @@ export default {
       width: 37.2rem;
       height: 33.1rem;
       @include respond(tab) {
-        margin-left: 5rem;
+       margin-left: 1rem;
         width: 47.8rem;
         height: 42.5rem;
+      border-radius: 3rem;
+
       }
       @include respond(deskTop) {
         width: 54rem;

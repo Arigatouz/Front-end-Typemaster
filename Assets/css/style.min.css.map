@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../../src/assets/scss/style.scss",
+        "../../src/assets/scss/_mixin.scss"
+    ],
+    "names": [],
+    "file": "style.min.css"
+}
