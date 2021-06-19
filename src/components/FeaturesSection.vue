@@ -102,6 +102,12 @@ export default {
         ". ."
         ". .";
     }
+    @include respond(deskTop) {
+      width: 80%;
+      display: flex;
+      flex-wrap: nowrap;
+      margin-left: 17rem;
+    }
   }
   &__compatible,
   &__wireless,
@@ -109,8 +115,11 @@ export default {
   &__RGB {
     text-align: center;
     margin-bottom: 7rem;
-    @include respond(tab){
+    @include respond(tab) {
       text-align: left;
+    }
+    @include respond(deskTop) {
+      margin-right: 3rem;
     }
   }
   &__imageContainer {
@@ -121,15 +130,13 @@ export default {
     border-radius: 1rem;
     display: flex;
     justify-content: center;
-     @include respond(tab){
-    margin-left: 0;
-      
+    @include respond(tab) {
+      margin-left: 0;
     }
   }
   &__icon {
     align-self: center;
     justify-self: center;
-   
   }
   &__title {
     font-size: 2.4rem;
