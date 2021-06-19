@@ -2,6 +2,11 @@
   <!-- eslint-disable  -->
   <main class="main">
     <div class="main__container">
+      <img
+        class="main__container__pattern"
+        src="../assets/shared/pattern-square.svg"
+        alt=""
+      />
       <div class="main__box">
         <div class="main__box__image1">
           <div class="main__box__overlay"></div>
@@ -56,12 +61,28 @@ export default {
 @import "../assets/scss/style.scss";
 .main {
   &__container {
+    @include respond(deskTop) {
+      display: flex;
+      position: relative;
+    }
+    &__pattern {
+      display: none;
+      @include respond(deskTop) {
+        display: inline-block;
+        position: absolute;
+        bottom: 6rem;
+        left: -15rem;
+      }
+    }
   }
   &__box {
     display: flex;
     margin-bottom: 6rem;
     @include respond(tab) {
       justify-content: center;
+    }
+    @include respond(deskTop) {
+      margin-left: 15rem;
     }
     &__overlay {
       width: 12.9rem;
@@ -75,7 +96,11 @@ export default {
         width: 21.4rem;
         height: 32rem;
         margin-left: 0;
-      } 
+      }
+      @include respond(deskTop) {
+        width: 25.5rem;
+        height: 48rem;
+      }
     }
     &__image1 {
       & picture {
@@ -88,6 +113,10 @@ export default {
             width: 21.4rem;
             height: 32rem;
             margin-left: 0;
+          }
+          @include respond(deskTop) {
+            width: 25.5rem;
+            height: 48rem;
           }
         }
       }
@@ -103,6 +132,9 @@ export default {
             width: 44.5rem;
             height: 32rem;
           }
+          @include respond(deskTop) {
+            height: 48rem;
+          }
         }
       }
     }
@@ -110,10 +142,16 @@ export default {
   &__info {
     width: 32.7rem;
     margin: 0 auto;
-    @include respond(tab){
+    @include respond(tab) {
       width: 90%;
       display: flex;
       justify-content: space-around;
+    }
+    @include respond(deskTop) {
+      display: block;
+      margin-top: 8rem;
+      width: 25.5rem;
+      height: 26rem;
     }
     &__title {
       font-size: 3.9rem;
@@ -121,7 +159,7 @@ export default {
       font-weight: 500;
       text-align: center;
       margin-bottom: 2rem;
-      @include respond(tab){
+      @include respond(tab) {
         font-size: 3.2rem;
         text-align: left;
         margin-right: 8rem;
@@ -133,7 +171,7 @@ export default {
       color: var(--body-color);
       line-height: 1.5;
       margin-bottom: 2rem;
-      @include respond(tab){
+      @include respond(tab) {
         font-size: 1.7rem;
         line-height: 1.8;
         align-self: center;

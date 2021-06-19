@@ -2,6 +2,11 @@
   <!--eslint-disable -->
   <header class="header">
     <div class="header__container">
+      <img
+        class="header__pattern"
+        src="../assets/shared/pattern-square.svg"
+        alt=""
+      />
       <div class="header__info">
         <div class="header__info__title">
           <h1>TypeMaster Keyboard</h1>
@@ -42,11 +47,23 @@ export default {
 </script>
 <style lang="scss" scoped>
 @import "../assets/scss/style.scss";
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@900&display=swap");
 .header {
   margin-top: 6rem;
   width: 100%;
+  position: relative;
+  overflow: hidden;
+
   @include respond(tab) {
     margin-bottom: 5rem;
+  }
+  &__pattern {
+    display: none;
+    @include respond(deskTop) {
+      display: inline-block;
+      position: absolute;
+      right: -17rem;
+    }
   }
   &__container {
     margin-bottom: 3rem;
@@ -54,7 +71,7 @@ export default {
       display: flex;
       margin-left: 5rem;
     }
-    @include respond(deskTop){
+    @include respond(deskTop) {
       justify-content: center;
     }
   }
@@ -63,20 +80,25 @@ export default {
     margin: 0 auto;
     @include respond(tab) {
       width: 43.9rem;
-      margin-top: 5rem; 
+      margin-top: 5rem;
     }
-    @include respond(deskTop){
-      width: 40%;
+    @include respond(deskTop) {
+      width: 50%;
+      margin-left: 10rem;
     }
+
     &__title {
+      font-family: "Barlow", sans-serif;
       margin: 0 0 2rem -1rem;
       font-size: 2.5rem;
-      font-style: oblique;
       text-transform: uppercase;
       line-height: 1.1;
       color: var(--Header-color);
       @include respond(tab) {
         font-size: 2.8rem;
+      }
+      @include respond(deskTop) {
+        font-size: 5rem;
       }
     }
     &__body {
@@ -86,6 +108,10 @@ export default {
       margin-bottom: 2rem;
       @include respond(tab) {
         margin-bottom: 4rem;
+      }
+      @include respond(deskTop) {
+        font-size: 1.8rem;
+        width: 40rem;
       }
     }
     &__action {
@@ -115,12 +141,12 @@ export default {
         @include respond(tab) {
           padding: 1.9rem 2.8rem;
           font-size: 1.6rem;
-            background-image: linear-gradient(
-          130deg,
-          transparent 0%,
-          transparent 50%,
-          var(--main-color-hover) 50%
-        );
+          background-image: linear-gradient(
+            130deg,
+            transparent 0%,
+            transparent 50%,
+            var(--main-color-hover) 50%
+          );
         }
         &:hover,
         &:focus {
@@ -137,7 +163,6 @@ export default {
           transform: scale(1);
           position: relative;
           @include respond(tab) {
-          
           }
           &::after {
             content: "";
@@ -167,7 +192,7 @@ export default {
   &__imageBox {
     overflow: hidden;
     margin-left: 3rem;
-    @include respond(deskTop){
+    @include respond(deskTop) {
       width: 52%;
     }
     &__image {
@@ -175,20 +200,18 @@ export default {
       width: 37.2rem;
       height: 33.1rem;
       @include respond(tab) {
-       margin-left: 1rem;
+        margin-left: 1rem;
         width: 47.8rem;
         height: 42.5rem;
-      border-radius: 3rem;
-
+        border-radius: 3rem;
       }
       @include respond(deskTop) {
         width: 54rem;
         height: 48rem;
-     
       }
     }
-    @include respond(deskTop){
-         margin-left: 0;
+    @include respond(deskTop) {
+      margin-left: 0;
     }
   }
 }
