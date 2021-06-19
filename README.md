@@ -30,4 +30,4 @@ This site was a challenge from frontendMentor and it was really fun doing it i'v
 
 ## Acknowledgments
 
-i do acknowledge that frontEndMentor helped me a lot in the presses of developing webApps
+i do acknowledge that frontEndMentor helped me a lot in the proses of developing webApps
