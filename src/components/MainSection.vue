@@ -17,6 +17,8 @@
                 ../assets/tablet/image-phone-and-keyboard.jpg  1297w,
                 ../assets/desktop/image-phone-and-keyboard.jpg 1640w
               "
+              sizes="(max-width: 600px) 480px,
+            800px"
             />
             <img
               src="../assets/mobile/image-phone-and-keyboard.jpg"
@@ -32,6 +34,8 @@
                 ../assets/tablet/image-glass-and-keyboard.jpg  1297w,
                 ../assets/desktop/image-glass-and-keyboard.jpg 1640w
               "
+              sizes="(max-width: 600px) 480px,
+            800px"
             />
             <img
               src="../assets/mobile/image-phone-and-keyboard.jpg"

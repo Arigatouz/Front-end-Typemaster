@@ -28,6 +28,8 @@
               ../assets/tablet/image-keyboard.jpg  1279w,
               ../assets/desktop/image-keyboard.jpg 1640w
             "
+            sizes="(max-width: 600px) 480px,
+            800px"
           />
           <img
             class="header__imageBox__image"
